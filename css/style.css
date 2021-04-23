@@ -247,12 +247,12 @@ body {
 }
 
 .side-chat .chat-window-in .message-in {
-    position: relative;
     padding: 15px;
     border-radius: 10px;
     background: #fff;
     display: flex;
     flex-direction: column;
+    word-wrap: break-word;
 }
 
 .side-chat .chat-window-out .message-out {
