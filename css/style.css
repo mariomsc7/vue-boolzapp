@@ -7,13 +7,14 @@
 }
 
 body {
+    font-family: sans-serif;
     height: 100vh;
     background-image: linear-gradient(
         to bottom,
-        green 0%,
-        green 15%,
-        #ccc 15%,
-        #ccc 100%
+        #32a093 0%,
+        #32a093 15%,
+        #dfe0d8 15%,
+        #dfe0d8 100%
     );
     display: flex;
     justify-content: center;
@@ -25,8 +26,6 @@ body {
     width: 80%;
     min-width: 900px;
     height: 95%;
-    background: yellow;
-
 }
 
 /* LEFT SIDE ----------------------------------------------*/
@@ -38,25 +37,62 @@ body {
     background: #fff;
 }
 
+/* HEADER */
+
 .side-navigation .user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 8%;
-    background: #ddd;
+    padding: 10px;
+    background: #ededed;
     border-right: 1px solid #000;
 }
+
+.side-navigation .user-header .user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-navigation .user-icon > img {
+    width: 48px;
+    border-radius: 50%;
+}
+
+.side-navigation .user-icon > span {
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.side-navigation .user-header .left-icons i {
+    font-size: 1.3rem;
+    margin-right: 15px;
+    color: #bababa;
+}
+
+
+
+/* NOTIFICA */
 
 .side-navigation .box-notifica {
     width: 100%;
     height: 9%;
-    background: dodgerblue;
+    background: #a2dffe;
 }
 
+/* INPUT */
 
 .side-navigation .input-box {
     width: 100%;
     height: 6%;
-    background: #ddd;
+    background: #fbfbfb;
 }
+
+/* CHAT */
 
 .side-navigation .chat-list {
     flex-grow: 1;
@@ -70,21 +106,66 @@ body {
     display: flex;
     flex-direction: column;
     flex-basis: 65%;
-    background: #eee;
 }
 
+/* HEADER */
+
 .side-chat .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 8%;
-    background: #ddd;
+    padding: 10px;
+    background: #ededed;
 }
+
+.side-chat .chat-header .user2-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-chat .chat-header .box-chat {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-chat .user2-icon .box-chat span:first-child { 
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.side-chat .user2-icon .box-chat span:last-child {
+    color: #777e82;
+    margin-top: 5px;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.side-chat .chat-header .user2-icon > img {
+    width: 48px;
+    border-radius: 50%;
+}
+
+.side-chat .chat-header .right-icons i {
+    font-size: 1.3rem;
+    margin-right: 15px;
+    color: #bababa;
+}
+
+/* MAIN */
 
 .side-chat .chat-main {
     flex-grow: 1;
+    background-image: url(../img/mine.jpg);
 }
+
+/* FOOTER */
 
 .side-chat .chat-footer {
     width: 100%;
     height: 8%;
-    background: #ddd;
+    background: #f4f0ec;
 }
