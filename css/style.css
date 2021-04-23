@@ -161,6 +161,39 @@ body {
 .side-navigation .chat-list {
     flex-grow: 1;
     background: #fff;
+    display: flex;
+}
+
+.side-navigation .chat-list ul {
+    list-style: none;
+    width: 100%;  
+}
+
+.side-navigation .chat-list .userlist {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.side-navigation .chat-list .userlist:first-child {
+    border-top: none;
+}
+
+.side-navigation .chat-list .userlist:last-child {
+    border-bottom: none;
+}
+
+.side-navigation .chat-list .userlist img {
+    width: 56px;
+    border-radius: 50%;
+}
+
+.side-navigation .chat-list .userlist span {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: 20px;
 }
 
 
