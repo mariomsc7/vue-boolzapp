@@ -37,7 +37,7 @@ body {
     background: #fff;
 }
 
-/* HEADER */
+/* HEADER -------------------------------------------------*/
 
 .side-navigation .user-header {
     display: flex;
@@ -76,7 +76,7 @@ body {
 
 
 
-/* NOTIFICA */
+/* NOTIFICA -----------------------------------------------*/
 
 .side-navigation .box-notifica {
     display: flex;
@@ -119,7 +119,7 @@ body {
 }
 
 
-/* INPUT */
+/* INPUT --------------------------------------------------*/
 
 .side-navigation .input-box {
     display: flex;
@@ -156,7 +156,7 @@ body {
 }
 
 
-/* CHAT */
+/* CHAT LIST ----------------------------------------------*/
 
 .side-navigation .chat-list {
     flex-grow: 1;
@@ -172,7 +172,7 @@ body {
     flex-basis: 65%;
 }
 
-/* HEADER */
+/* HEADER -------------------------------------------------*/
 
 .side-chat .chat-header {
     display: flex;
@@ -219,14 +219,63 @@ body {
     color: #bababa;
 }
 
-/* MAIN */
+/* CHAT MAIN ----------------------------------------------*/
 
 .side-chat .chat-main {
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
 }
 
-/* FOOTER */
+.chat-left,
+.chat-right {
+    display: flex;
+    width: 320px;
+    height: 110px;
+}
+
+.side-chat .chat-window-in {
+    width: 320px;
+    align-self: flex-end;
+}
+
+.side-chat .chat-window-out {
+    width: 320px;
+    align-self: flex-start;
+}
+
+.side-chat .chat-window-in .message-in {
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-chat .chat-window-out .message-out {
+    padding: 15px;
+    border-radius: 10px;
+    background: #ddfabf;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-in > div,
+.message-out > div {
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.side-chat .message-time {
+    font-size: 10px;
+    align-self: flex-end;
+    color: #bec1c3;
+}
+
+/* FOOTER -------------------------------------------------*/
 
 .side-chat .chat-footer {
     width: 100%;
