@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
     height: 100vh;
     background-image: linear-gradient(
         to bottom,
@@ -168,6 +168,16 @@ body {
     list-style: none;
     width: 100%;  
 }
+
+.side-navigation .chat-list .userlist {
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.side-navigation .chat-list .userlist:hover {
+    background: #eee;
+}
+
 
 .side-navigation .chat-list .userlist {
     display: flex;
