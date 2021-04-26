@@ -267,26 +267,24 @@ body {
 .side-chat .chat-main {
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
-    display: flex;
-    justify-content: space-around;
-    padding-top: 50px;
+    padding: 50px 80px;
 }
 
 .chat-left,
 .chat-right {
     display: flex;
-    width: 320px;
-    height: 110px;
+}
+
+.chat-right {
+    justify-content: flex-end;
 }
 
 .side-chat .chat-window-in {
     width: 320px;
-    align-self: flex-end;
 }
 
 .side-chat .chat-window-out {
-    width: 320px;
-    align-self: flex-start;
+     width: 320px;
 }
 
 .side-chat .chat-window-in .message-in {

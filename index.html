@@ -62,7 +62,7 @@
             <div class="chat-list">
                 <ul>
                     <li class="userlist" v-for="users in contatti">
-                        <img :src="users.avatar" :alt="userphoto">
+                        <img :src="'./img/avatar' + users.avatar + '.jpg'" :alt="users.name">
                         <span>{{ users.name }}</span>
                     </li>
                 </ul>
@@ -102,6 +102,7 @@
                         </div>
                     </div>
                 </div>
+            
 
                 <div class="chat-right">
                     <div class="chat-window-out">
