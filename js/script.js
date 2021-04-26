@@ -91,7 +91,13 @@ const app = new Vue({
                 ],
             },
         ],
-    },
+        indexContatti: 0,
 
+    },
+    methods: {
+        activeMessage(index) {
+            this.indexContatti = index;
+        }
+    }
 
 });

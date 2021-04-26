@@ -267,7 +267,7 @@ body {
 .side-chat .chat-main {
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
-    padding: 50px 80px;
+    padding: 20px 70px;
 }
 
 .chat-left,
@@ -288,7 +288,7 @@ body {
 }
 
 .side-chat .chat-window-in .message-in {
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 5px;
     border-radius: 10px;
     background: #fff;
@@ -297,23 +297,23 @@ body {
     word-wrap: break-word;
 }
 
-.side-chat .chat-window-out .message-out {
+/* .side-chat .chat-window-out .message-out {
     padding: 15px;
     margin-bottom: 5px;
     border-radius: 10px;
     background: #ddfabf;
     display: flex;
     flex-direction: column;
-}
+} */
 
-.message-in > div,
-.message-out > div {
+.message-in > div {
     font-size: .9rem;
     font-weight: bold;
 }
 
 .side-chat .message-time {
     font-size: 10px;
+    padding-top: 15px;
     align-self: flex-end;
     color: #bec1c3;
 }

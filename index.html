@@ -61,9 +61,12 @@
             <!-- CHAT LIST - IMPORT FROM VUE DATA -->
             <div class="chat-list">
                 <ul>
-                    <li class="userlist" v-for="users in contatti">
-                        <img :src="'./img/avatar' + users.avatar + '.jpg'" :alt="users.name">
-                        <span>{{ users.name }}</span>
+                    <li class="userlist"
+                         v-for="(user, index) in contatti"
+                         @click="activeMessage(index)"
+                    >
+                        <img :src="'./img/avatar' + user.avatar + '.jpg'" :alt="user.name">
+                        <span>{{ user.name }}</span>
                     </li>
                 </ul>
             </div>
@@ -92,26 +95,26 @@
             </header>
 
             <!-- CHAT MAIN -->
-            <main class="chat-main">
+            <main v-for="messaggio in contatti[indexContatti].messages" class="chat-main">
 
-                <div class="chat-left">
+                <div v-bind:class="{'chat-left': messaggio.status === 'sent', 'chat-right': messaggio.status === 'received' }">
                     <div class="chat-window-in">
-                        <div class="message-in">
-                            <div>Messaggio ricevuto</div>
-                            <div class="message-time">10/01/2021 15:50:00</div>
+                        <div class="message-in green">
+                            <div class="his-message">{{messaggio.message}}</div>
+                            <div class="message-time">{{messaggio.date}}</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="chat-right">
+                <!-- <div class="chat-right">
                     <div class="chat-window-out">
                         <div class="message-out">
-                           <div>Messaggio inviato </div> 
+                           <div class="my-message">Messaggio inviato </div> 
                            <div class="message-time">10/01/2021 15:50:00</div>
                         </div>
                         
                     </div>
-                </div>
+                </div> -->
 
             </main>
 
