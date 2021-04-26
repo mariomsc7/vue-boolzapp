@@ -289,6 +289,7 @@ body {
 
 .side-chat .chat-window-in .message-in {
     padding: 15px;
+    margin-bottom: 5px;
     border-radius: 10px;
     background: #fff;
     display: flex;
@@ -298,6 +299,7 @@ body {
 
 .side-chat .chat-window-out .message-out {
     padding: 15px;
+    margin-bottom: 5px;
     border-radius: 10px;
     background: #ddfabf;
     display: flex;
