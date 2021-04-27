@@ -103,7 +103,7 @@
                     <div class="chat-window-in">
                         <div class="message-in">
                             <div class="his-message">{{messaggio.message}}</div>
-                            <div class="message-time">{{messaggio.date}}</div>
+                            <div id="time" class="message-time">{{messaggio.date}}</div>
                         </div>
                     </div>
                 </div>
@@ -130,8 +130,12 @@
 
 
 
+    <!-- JS -->
 
-
+    <!-- DAY JS -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/plugin/customParseFormat.js"></script>
+    <!-- MAIN JS -->
     <script src="./js/script.js"></script>
 </body>
 </html>

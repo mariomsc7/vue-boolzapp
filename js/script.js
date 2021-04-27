@@ -2,6 +2,17 @@
  * BOOLZAPP
  */
 
+// day js
+var time = document.getElementById('time');
+
+// Plugins
+dayjs.extend(dayjs_plugin_customParseFormat);
+
+// format date
+time = dayjs().format('DD/MM/YYYY HH:mm:ss');
+
+
+// vue js
 const app = new Vue({
     el: '#app',
     data: {
@@ -104,6 +115,7 @@ const app = new Vue({
                 this.contatti[this.indexContatti].messages.push({
                     message: this.myMessage,
                     status: 'sent',
+                    date: time,
                 });
 
                 this.myMessage = '';
