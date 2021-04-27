@@ -101,10 +101,12 @@ const app = new Vue({
         },
         newMessage() {
             if(this.myMessage !== '') {
-                this.messages.push({
+                this.contatti[this.indexContatti].messages.push({
                     message: this.myMessage,
                     status: 'sent',
                 });
+
+                this.myMessage = '';
             }
         }
     },
