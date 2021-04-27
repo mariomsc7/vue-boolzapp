@@ -62,6 +62,7 @@
             <div class="chat-list">
                 <ul>
                     <li class="userlist"
+                        :class="{active: index === indexContatti}"
                          v-for="(user, index) in contatti"
                          @click="activeMessage(index)"
                     >
@@ -80,9 +81,9 @@
             <!-- CHAT HEADER -->
             <header class="chat-header">
                 <div class="user2-icon">
-                    <img src="./img/avatar_1.jpg" alt="Michele">
+                    <img :src="`./img/avatar${contatti[indexContatti].avatar}.jpg`" alt="user">
                     <div class="box-chat">
-                        <span>Michele</span>
+                        <span>{{ contatti[indexContatti].name }}</span>
                         <span>Ultimo accesso oggi alle 10.35</span>
                     </div>
                 </div>
@@ -95,26 +96,17 @@
             </header>
 
             <!-- CHAT MAIN -->
-            <main v-for="messaggio in contatti[indexContatti].messages" class="chat-main">
+            <main class="chat-main">
 
-                <div v-bind:class="{'chat-left': messaggio.status === 'sent', 'chat-right': messaggio.status === 'received' }">
+                <div v-for="messaggio in contatti[indexContatti].messages"
+                 v-bind:class="{'chat-right': messaggio.status === 'sent', 'chat-left': messaggio.status === 'received'}">
                     <div class="chat-window-in">
-                        <div class="message-in green">
+                        <div class="message-in">
                             <div class="his-message">{{messaggio.message}}</div>
                             <div class="message-time">{{messaggio.date}}</div>
                         </div>
                     </div>
                 </div>
-
-                <!-- <div class="chat-right">
-                    <div class="chat-window-out">
-                        <div class="message-out">
-                           <div class="my-message">Messaggio inviato </div> 
-                           <div class="message-time">10/01/2021 15:50:00</div>
-                        </div>
-                        
-                    </div>
-                </div> -->
 
             </main>
 
