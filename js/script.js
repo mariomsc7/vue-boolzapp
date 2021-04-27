@@ -9,6 +9,7 @@ var time = document.getElementById('time');
 dayjs.extend(dayjs_plugin_customParseFormat);
 
 // format date
+dayjs.locale('it');
 time = dayjs().format('DD/MM/YYYY HH:mm:ss');
 
 
@@ -119,16 +120,16 @@ const app = new Vue({
                     date: time,
                 });
                 this.myMessage = '';
-            }
-            setTimeout(() => {
-                if(this.myMessage) {
+
+                setTimeout(() => {
                     this.contatti[this.indexContatti].messages.push({
-                        message: botMessage,
+                        message: this.botMessage,
                         status: 'received',
                         date: time,
                     })
-                }
-            }, 1000)
+                }, 1000);
+            }
+
         }
     },
 
