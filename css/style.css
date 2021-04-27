@@ -272,6 +272,7 @@ body {
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
     padding: 20px 70px;
+    overflow-y: auto;
 }
 
 .chat-left,
