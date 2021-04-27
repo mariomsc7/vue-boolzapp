@@ -92,12 +92,22 @@ const app = new Vue({
             },
         ],
         indexContatti: 0,
+        myMessage: '',
 
     },
     methods: {
         activeMessage(index) {
             this.indexContatti = index;
+        },
+        newMessage() {
+            if(this.myMessage !== '') {
+                this.messages.push({
+                    message: this.myMessage,
+                    status: 'sent',
+                });
+            }
         }
-    }
+    },
+
 
 });
