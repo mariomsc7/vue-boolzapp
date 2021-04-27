@@ -104,6 +104,7 @@ const app = new Vue({
         ],
         indexContatti: 0,
         myMessage: '',
+        botMessage: 'ok',
 
     },
     methods: {
@@ -117,9 +118,17 @@ const app = new Vue({
                     status: 'sent',
                     date: time,
                 });
-
                 this.myMessage = '';
             }
+            setTimeout(() => {
+                if(this.myMessage) {
+                    this.contatti[this.indexContatti].messages.push({
+                        message: botMessage,
+                        status: 'received',
+                        date: time,
+                    })
+                }
+            }, 1000)
         }
     },
 
