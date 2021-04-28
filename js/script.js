@@ -106,12 +106,14 @@ const app = new Vue({
         indexContatti: 0,
         myMessage: '',
         botMessage: 'ok',
-
+        search: '',
     },
     methods: {
+        // visualizzazione dinamica dei messaggi
         activeMessage(index) {
             this.indexContatti = index;
         },
+        // messaggio inserito dall'utente
         newMessage() {
             if(this.myMessage !== '') {
                 this.contatti[this.indexContatti].messages.push({
@@ -120,7 +122,7 @@ const app = new Vue({
                     date: time,
                 });
                 this.myMessage = '';
-
+                // risposta automatica bot
                 setTimeout(() => {
                     this.contatti[this.indexContatti].messages.push({
                         message: this.botMessage,
@@ -130,6 +132,17 @@ const app = new Vue({
                 }, 1000);
             }
 
+        },
+        // filtro ricerca nomi
+        filterUser() {
+            this.contatti.forEach((user) => {
+                if(user.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    user.visible = true;
+                } else {
+                    user.visible = false;
+                };
+                console.log(user);
+            })
         }
     },
 

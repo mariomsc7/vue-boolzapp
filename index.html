@@ -54,7 +54,11 @@
             <div class="input-box">
                 <div class="items-box">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text"
+                     placeholder="Cerca o inizia una nuova chat"
+                     v-model.trim="search"
+                     @keyup="filterUser"
+                    >
                 </div>
             </div>
 
@@ -64,6 +68,7 @@
                     <li class="userlist"
                         :class="{active: index === indexContatti}"
                          v-for="(user, index) in contatti"
+                         v-show="user.visible"
                          @click="activeMessage(index)"
                     >
                         <img :src="'./img/avatar' + user.avatar + '.jpg'" :alt="user.name">
